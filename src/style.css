@@ -1,7 +1,8 @@
-p{
-    color: crimson;
-    font-size: 4rem;
+a{
+    text-decoration: none;
+    all: unset;
+    cursor: pointer;
 }
-body{
-    background-color: skyblue;
+svg{
+    height: 3rem;
 }
