@@ -64,6 +64,9 @@ svg{
     margin-bottom: 1rem;
     font-family: var(--header-font);
 }
+.card > img{
+  border-radius: 1rem;
+}
 .aboutme-text > p{
     font-size: 1.5rem;
     font-family: var(--secondary-font);
@@ -98,7 +101,8 @@ svg{
 /** projects section style **/
 
 .projects{
-    margin: 2rem 5rem;
+    padding: 2rem 7rem;
+    background-color: #87CEEB;
 }
 .projects > h2{
     font-size: 3rem;
@@ -107,19 +111,66 @@ svg{
 }
 .my-works{
     /* max-width: 1400px; */
-    background-color: aqua;
+    /* background-color: aqua; */
     display: grid;
-    
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 3rem;
 }
 .card{
-    max-width: ;
+  
+  display: flex;
+  flex-direction:column;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  border: 0.5rem solid rgba(54, 52, 52, 0.668);
+  background-color: rgb(209, 203, 203);
+  transition: transform 0.2s linear;
+}
+.card:hover{
+  transform: translateY(-1.2rem);
+}
+.card:hover .card-img{
+  filter: none;
+}
+.card-img{
+  filter: blur(8px) brightness(0.8) grayscale(60%);
+  flex: 1;
+  transition: filter 0.2s linear;
+  width: 100%;
+  height: auto;
+  
 }
 
+.card-main-text{
+  flex: 2;
+}
+.card-main-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
 
+}
+.card-main-text > h4{
+  font-size: 2rem;
+  font-family: var(--header-font);
+}
+.card-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.card-inner-p{
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
 
 @media (max-width: 1000px) {
   .about-me {
     flex-direction: column;
+    height: 105vh;
   }
   .img-section{
     height: 400px;
@@ -142,9 +193,24 @@ svg{
   #main-img:hover{
     box-shadow: 1rem 0rem 1.2rem rgba(32, 30, 30, 0.773);
 }
-/* .img-section{
-    transform: translate(-9rem , 4rem);
-} */
+.card-main-text > h4{
+  font-size: 1.8rem;
+}
+.projects{
+  padding: 2rem 4rem;
+    
+}
+.card-inner-p{
+  font-size: 1.2rem;
+}
+.my-works{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card{
+  padding: 1.5rem 2.5rem;
+}
 
 }
 
@@ -158,6 +224,9 @@ svg{
     height: 50%;
     min-width: 300px;
   }
+  .projects > h2{
+    font-size: 2rem;
+}
   .img-section > h1{
     font-size: 2rem;
     left: 18%;
@@ -184,8 +253,25 @@ svg{
   #main-img:hover{
     box-shadow: 1rem 0rem 1.2rem rgba(32, 30, 30, 0.773);
 }
-/* .img-section{
-    transform: translate(-9rem , 4rem);
-} */
-
+.card-main-text{
+  flex-wrap: wrap;
+}
+.projects{
+    padding: 2rem 1rem;
+}
+.card-inner-p{
+  font-size: 1.2rem;
+}
+.card-main-text > h4{
+  font-size: 1.5rem;
+}
+.icon{
+  font-size: 1.8rem;
+}
+svg{
+    height: 2rem;
+}
+.card-icons{
+  gap: 0.5rem;
+}
 }
