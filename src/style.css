@@ -22,12 +22,16 @@ a{
 svg{
     height: 3rem;
 }
-
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(170deg, skyblue 0%, skyblue 20%,skyblue 40% ,skyblue 59% , #e4e2e2 59.1%);
+}
 .about-me{
     height: 100vh;
-    /* min-width: 1200px; */
+    max-width: 1300px;
     padding: 5rem;
-    background:linear-gradient(170deg, skyblue 0%, skyblue 20%,skyblue 40% ,skyblue 59% , #e4e2e2 59.1%);
     display: flex;
     align-items: center;
 }
@@ -45,6 +49,14 @@ svg{
     background-color: rgba(211, 207, 207, 0.517);
     transition: box-shadow 0.2s linear;
     
+}
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact{
+  max-width: 1300px;
 }
 .aboutme-text:hover{
     box-shadow: .9rem .9rem .9rem rgba(0, 0, 0, 0.425);
@@ -101,9 +113,11 @@ svg{
 /** projects section style **/
 
 .projects{
-    padding: 2rem 7rem;
-    background-color: #87CEEB;
+  max-width: 1300px;
+  padding: 2rem 0;
+  
 }
+
 .projects > h2{
     font-size: 3rem;
     font-family: var(--header-font);
@@ -116,13 +130,17 @@ svg{
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 3rem;
 }
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d5d7da4;
+}
 .card{
   
   display: flex;
   flex-direction:column;
   padding: 2rem 3rem;
-  border-radius: 2rem;
-  border: 0.5rem solid rgba(54, 52, 52, 0.668);
   background-color: rgb(209, 203, 203);
   transition: transform 0.2s linear;
 }
@@ -148,6 +166,7 @@ svg{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   margin-top: 1.5rem;
 
 }
@@ -197,7 +216,7 @@ svg{
   font-size: 1.8rem;
 }
 .projects{
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
     
 }
 .card-inner-p{
@@ -209,7 +228,7 @@ svg{
 }
 
 .card{
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2rem;
 }
 
 }
@@ -257,7 +276,7 @@ svg{
   flex-wrap: wrap;
 }
 .projects{
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
 }
 .card-inner-p{
   font-size: 1.2rem;
