@@ -25,19 +25,21 @@ svg{
 
 .about-me{
     height: 100vh;
-    width: 100%;
+    /* min-width: 1200px; */
     padding: 5rem;
     background:linear-gradient(170deg, skyblue 0%, skyblue 20%,skyblue 40% ,skyblue 59% , #e4e2e2 59.1%);
     display: flex;
     align-items: center;
-    gap: 0.1rem;
 }
 .img-section{
-    width: 36em;
+    flex: 1;
+    /* width: 36em; */
     position: relative;
+    min-width: 400px;
 }
 .aboutme-text{
-    width: calc(100% - 500px);
+    /* width: calc(100% - 500px); */
+    flex: 2;
     padding: 2rem;
     border: .2rem solid black;
     background-color: rgba(211, 207, 207, 0.517);
@@ -49,6 +51,8 @@ svg{
 }
 #main-img{
     width: 100%;
+    height: 100%;
+    object-fit: cover   ;
     margin: 0 auto;
     transition: box-shadow 0.2s linear;
 }
@@ -67,13 +71,13 @@ svg{
     margin-bottom: 2rem;
 }
 .img-section > h1{
-    color: rgb(230, 226, 226);
+    color: rgba(231, 176, 24, 0.737);
     font-size: 3rem;
     position: absolute;
     bottom: 4%;
-    left: 20%;
+    left: 18%;
     font-family: var(--header-font);
-}
+} 
 .icons{
     display: flex;
     justify-content: end;
@@ -91,36 +95,97 @@ svg{
     transform: scale(1.2) rotate(360deg);
 }
 
+/** projects section style **/
+
+.projects{
+    margin: 2rem 5rem;
+}
+.projects > h2{
+    font-size: 3rem;
+    font-family: var(--header-font);
+    margin-bottom: 1.5rem;
+}
+.my-works{
+    /* max-width: 1400px; */
+    background-color: aqua;
+    display: grid;
+    
+}
+.card{
+    max-width: ;
+}
 
 
 
 @media (max-width: 1000px) {
   .about-me {
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-  }
-
-  .img-section,
-  .aboutme-text {
-    width: 100%;
-    min-width: 600px; /* Optional for aesthetics */
-  }
-  #main-img{
-    width: 300px;
   }
   .img-section{
-    position: static;
+    height: 400px;
   }
-  .about-me{
-    position: relative;
+  .aboutme-text{
+    min-width: 490px;
+    padding: 1rem;
+
+  }
+  .aboutme-text > h2{
+    font-size: 2rem;
+  }
+  .aboutme-text > p{
+    font-size: 1.2rem;
+  }
+    .img-section > h1{
+    font-size: 2.5rem;
+    left: 20%;
+  }
+  #main-img:hover{
+    box-shadow: 1rem 0rem 1.2rem rgba(32, 30, 30, 0.773);
+}
+/* .img-section{
+    transform: translate(-9rem , 4rem);
+} */
+
+}
+
+
+@media (max-width: 500px) {
+  .about-me {
+    flex-direction: column;
+    gap: 0px 0.3rem;
+  }
+  .img-section{
+    height: 50%;
+    min-width: 300px;
   }
   .img-section > h1{
-    
-    top: 2%;
-    left: 55%;
-    font-size: 2.5rem;
-    text-align: center;
-    
+    font-size: 2rem;
+    left: 18%;
+  }
+  .aboutme-text{
+    height: 50%;
+    min-width: 300px;
+    border: none;
+    background-color: transparent;
+
+  }
+  .icons{
+    justify-content: center;
+  }
+  .aboutme-text:hover{
+    box-shadow: none;
+  }
+  .aboutme-text > h2{
+    font-size: 1.6rem;
+  }
+  .aboutme-text > p{
+    font-size: 1rem;
+  }
+  #main-img:hover{
+    box-shadow: 1rem 0rem 1.2rem rgba(32, 30, 30, 0.773);
 }
+/* .img-section{
+    transform: translate(-9rem , 4rem);
+} */
+
 }
