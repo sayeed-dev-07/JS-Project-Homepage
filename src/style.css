@@ -37,27 +37,24 @@ header{
 }
 .img-section{
     flex: 1;
-    /* width: 36em; */
+
     position: relative;
     min-width: 400px;
 }
 .aboutme-text{
-    /* width: calc(100% - 500px); */
+    
     flex: 2;
     padding: 2rem;
     border: .2rem solid black;
     background-color: rgba(211, 207, 207, 0.517);
     transition: box-shadow 0.2s linear;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contact{
-  max-width: 1300px;
-}
+
+
 .aboutme-text:hover{
     box-shadow: .9rem .9rem .9rem rgba(0, 0, 0, 0.425);
 }
@@ -71,7 +68,7 @@ footer{
 #main-img:hover{
     box-shadow: 0rem 1rem 1.2rem rgba(32, 30, 30, 0.773);
 }
-.aboutme-text > h2{
+.aboutme-text * h2{
     font-size: 3rem;
     margin-bottom: 1rem;
     font-family: var(--header-font);
@@ -79,7 +76,7 @@ footer{
 .card > img{
   border-radius: 1rem;
 }
-.aboutme-text > p{
+.aboutme-text * p{
     font-size: 1.5rem;
     font-family: var(--secondary-font);
     font-weight: 500;
@@ -90,7 +87,7 @@ footer{
     font-size: 3rem;
     position: absolute;
     bottom: 4%;
-    left: 18%;
+    left: 14%;
     font-family: var(--header-font);
 } 
 .icons{
@@ -124,24 +121,25 @@ footer{
     margin-bottom: 1.5rem;
 }
 .my-works{
-    /* max-width: 1400px; */
-    /* background-color: aqua; */
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 3rem;
+    margin: 3rem 0;
 }
 main{
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #0d5d7da4;
+  padding: 0px 2rem;
 }
 .card{
   
   display: flex;
   flex-direction:column;
   padding: 2rem 3rem;
-  background-color: rgb(209, 203, 203);
+  background-color: rgba(236, 232, 232, 0.888);
   transition: transform 0.2s linear;
 }
 .card:hover{
@@ -186,23 +184,93 @@ main{
   font-weight: 500;
 }
 
+
+/* footer styles here */
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 18, 18, 0.936);
+  color: rgb(196, 191, 191);
+}
+.contact{
+  max-width: 1300px;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
+}
+.contact-text{
+  width: 50%;
+}
+.contact-text > h2{
+  font-size: 3rem;
+  font-family: var(--header-font);
+}
+.contact-text > h5{
+  font-size: 1.8rem;
+
+}
+.footer-img-section{
+  width: 50%;
+}
+.footer-img-section > img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.phone > a{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#phone-number{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.mail > a{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+
+}
+#mail-id{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#footer-icons{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 1.5rem;
+  gap: 2rem;
+}
+.footer-icon-single{
+  font-size: 1.4rem;
+}
 @media (max-width: 1000px) {
   .about-me {
     flex-direction: column;
-    height: 105vh;
+    padding: 1rem;
   }
   .img-section{
     height: 400px;
   }
   .aboutme-text{
-    min-width: 490px;
+    max-height: 45%;
+    /* min-width: 490px; */
     padding: 1rem;
 
   }
-  .aboutme-text > h2{
+  .aboutme-text * h2{
     font-size: 2rem;
   }
-  .aboutme-text > p{
+  .aboutme-text * p{
     font-size: 1.2rem;
   }
     .img-section > h1{
@@ -219,14 +287,38 @@ main{
   padding: 2rem 2rem;
     
 }
+.contact{
+  padding: 3rem 2rem;
+
+}
+footer{
+  justify-content: start;
+}
+.contact-text{
+  width: 100%;
+}
+.mail > a{
+  gap: 0.3rem;
+}
+.phone > a{
+  gap: 0.3rem;
+}
+.footer-img-section{
+  display: none;
+}
 .card-inner-p{
   font-size: 1.2rem;
 }
 .my-works{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
-
+.contact-text > h2{
+  font-size: 3rem;
+}
+.contact-text > h5{
+  font-size: 1.3rem;
+}
 .card{
   padding: 1.5rem 2rem;
 }
@@ -238,6 +330,7 @@ main{
   .about-me {
     flex-direction: column;
     gap: 0px 0.3rem;
+    /* height: 110vh; */
   }
   .img-section{
     height: 50%;
@@ -263,10 +356,10 @@ main{
   .aboutme-text:hover{
     box-shadow: none;
   }
-  .aboutme-text > h2{
+  .aboutme-text * h2{
     font-size: 1.6rem;
   }
-  .aboutme-text > p{
+  .aboutme-text * p{
     font-size: 1rem;
   }
   #main-img:hover{
@@ -292,5 +385,33 @@ svg{
 }
 .card-icons{
   gap: 0.5rem;
+}
+.contact{
+  padding: 2rem 1rem;
+}
+.contact-text > h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+}
+.contact-text > h5{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+#mail-id  {
+  font-size: 1rem;
+
+}
+#footer-icons{
+  margin-top: 2rem;
+}
+#phone-number  {
+  font-size: 1rem;
+}
+.phone{
+  margin-bottom: 0.6rem;
+}
+.footer-icon-single{
+  font-size: 1rem;
 }
 }
